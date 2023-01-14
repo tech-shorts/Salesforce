@@ -1,0 +1,8 @@
+<aura:tokens>
+	<aura:token name="myTextFontFace" 
+               value="'Salesforce Sans', Helvetica, Arial, sans-serif"/>
+    <aura:token name="myTextFontWeight" value="Bold"/>
+    <aura:token name="myBackgroundColor" value="#808080"/>
+    <aura:token name="myTextColor" value="red"/>
+    <aura:token name="myMarginForTable" value="5px"/>
+</aura:tokens>

@@ -1,0 +1,4 @@
+.myTitleDiv{
+    color: var(--c-myTextColor); 
+    background-color: var(--c-myBackgroundColor); 
+}

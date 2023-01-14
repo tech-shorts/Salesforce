@@ -1,0 +1,21 @@
+.myNewStyleForButton{
+    --sds-c-button-brand-color-background: orange;
+    --sds-c-button-brand-color-border: orange;
+}
+.myNewStyleForBadge{
+    --sds-c-badge-color-background: green;
+    --sds-c-badge-text-color: white;
+}
+
+/* 
+ *  We can also add above class to host, but it will apply to all the lightning buttons and badges.
+*/
+:host {
+    /*  
+    *    --sds-c-button-brand-color-background: orange;
+    *    --sds-c-button-brand-color-border: orange;
+    *    --sds-c-badge-color-background: green;
+    *    --sds-c-badge-text-color: white;
+    */
+
+}

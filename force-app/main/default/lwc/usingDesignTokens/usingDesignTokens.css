@@ -1,0 +1,4 @@
+.myClass{
+    color: var(--lwc-colorTextRequired); 
+    background-color: var(--lwc-colorBackgroundRowNew); 
+}

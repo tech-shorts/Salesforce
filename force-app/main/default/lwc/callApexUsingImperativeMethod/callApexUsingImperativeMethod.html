@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Call apex method using imperative way" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <div class="slds-border_bottom">Calling apex method Imperatively</div>
+            <template if:true={accounts}>
+                <ol class="slds-list_ordered">
+                    <template for:each={accounts} for:item="acc">
+                        <li key={acc.Id}>{acc.Name}</li>
+                    </template>
+                </ol>
+            </template>
+            <lightning-button label="Show All Accounts" variant="brand" onclick={handleGetAccounts}></lightning-button>
+            <br/><br/>
+           
+            <div class="slds-border_bottom">Calling apex method imperative with params</div>
+            <p>Annual Revenue: {revenue}</p>
+            <lightning-button label="Show revenue" variant="brand" onclick={handleRevenue}></lightning-button>
+        </div>
+    </lightning-card> 
+</template>

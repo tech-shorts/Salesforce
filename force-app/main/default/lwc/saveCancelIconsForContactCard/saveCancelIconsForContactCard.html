@@ -1,0 +1,92 @@
+<template>
+    <!-- view mode form -->
+    <template if:true={isViewMode}>
+        <lightning-card class="slds-col slds-p-vertical_xx-small slds-size_1-of-1"
+                        icon-name="standard:related_list"
+                        title="Contact Card">
+        
+        <!-- for edit button icon-->
+        <lightning-button-icon class="slds-m-around_none"
+                                icon-name="action:edit"
+                                onclick={switchForm}
+                                variant="container"
+                                slot="actions"
+                                alternative-text="edit">
+        </lightning-button-icon> 
+        
+        <!-- to view record data -->
+        <lightning-record-view-form density="comfy"  
+                                    record-id={recordId} 
+                                    object-api-name="Contact">
+            <div class="slds-m-horizontal_medium">
+                <template for:each={FIELDS} for:item="field">
+                    <div key={field.name}>
+                    <template if:true={field.label}>
+                        <div class="slds-form-element_label slds-no-flex">
+                            {field.label}
+                        </div>
+                        <lightning-output-field field-name={field.name} variant="label-hidden"></lightning-output-field>
+                    </template>
+                    <template if:false={field.label}>
+                        <lightning-output-field field-name={field.name}></lightning-output-field>
+                    </template>
+                </div>
+                </template>
+            </div>
+        </lightning-record-view-form>             
+        </lightning-card>
+    </template>
+    
+    <!-- Loading Spinner-->
+    <template if:true={loading}>
+        <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+    </template>
+
+    <!-- Edit form-->
+    <template if:false={isViewMode}>
+        
+        <!-- to edit record-->
+        <lightning-record-edit-form density="comfy"
+                                    record-id={recordId}
+                                    object-api-name="Contact"
+                                    onsubmit={handleSubmit}
+                                    onsuccess={handleSuccess}
+                                    onerror={handleError}>
+
+            <lightning-card class="slds-col slds-p-vertical_xx-small slds-size_1-of-1"
+                                        icon-name="standard:related_list"
+                                        title="Contact Card">  
+                
+                <!-- Save and cancel icons -->                                     
+                <lightning-button-icon icon-name="action:remove" 
+                                        onclick={switchForm}  
+                                        variant="container"
+                                        slot="actions"
+                                        alternative-text="Cancel">
+                </lightning-button-icon>    
+                <lightning-button-icon icon-name="action:check" 
+                                        type="submit"  
+                                        variant="container"
+                                        slot="actions"
+                                        alternative-text="Save">
+                </lightning-button-icon>            
+                <div class="slds-m-horizontal_medium">
+                    <!-- show input fields -->
+                    <template for:each={FIELDS} for:item="field">
+                        <div key={field.name}>
+                        <template if:true={field.label}>
+                            <div class="slds-form-element_label slds-no-flex">
+                                {field.label}
+                            </div>
+                            <lightning-input-field field-name={field.name} variant="label-hidden"></lightning-input-field>
+                        </template>
+                        <template if:false={field.label}>
+                            <lightning-input-field field-name={field.name}></lightning-input-field>
+                        </template>
+                    </div>
+                    </template>
+                </div> 
+            </lightning-card> 
+        </lightning-record-edit-form>                                   
+    </template>
+</template>

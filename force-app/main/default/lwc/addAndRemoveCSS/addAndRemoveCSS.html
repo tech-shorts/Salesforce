@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Add and Remove CSS Classes" icon-name="utility:hide">
+        <div class="slds-m-around_medium">
+            <div class="slds-border_left" data-id="myDiv">This is a Sample text to Add and Remove style using classList</div></br>
+            <lightning-button class="slds-p-around_medium" onclick={addBorderRight} label="Add Border Right"></lightning-button>
+            <lightning-button onclick={removeBorderRight} label="Remove Border Right"></lightning-button>
+        </br></br>
+            <div class={addRemoveClass}>This is a Sample text to Add and Remove style using variable</div></br>
+            <lightning-button class="slds-m-around_medium" onclick={addBorderTopAndBottom} label="Add Border Top And Bottom"></lightning-button>
+            <lightning-button onclick={removeBorderTop} label="Remove Border Top"></lightning-button>
+        </div>    
+    </lightning-card>
+</template>

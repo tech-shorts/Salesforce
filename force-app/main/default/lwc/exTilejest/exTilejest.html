@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="A tile component for JEST Test class" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <p>Action Selected {tileAction}</p>
+            <div class="slds-p-around_medium">
+                <lightning-tile label="Marc Benioff" type="media" actions={myActions} onactiontriggered={handleAction}>
+                    <lightning-icon slot="media" icon-name="standard:groups"></lightning-icon>
+                    <p class="slds-truncate">Salesforce</p>
+                </lightning-tile>
+            </div>
+        </div>
+    </lightning-card>
+</template>
