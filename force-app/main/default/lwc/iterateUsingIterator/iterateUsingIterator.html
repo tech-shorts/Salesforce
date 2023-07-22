@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Iterate using Iterator" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template iterator:it={fruitsList}>
+                <li key={it.value.Id}>
+                    <div if:true={it.first} class="slds-border_top"></div>
+                    {it.value.Id}. {it.value.Name}
+                    <div if:true={it.last} class="slds-border_bottom"></div>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
