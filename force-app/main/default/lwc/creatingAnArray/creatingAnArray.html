@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Create an array assignment" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={fruitsArray2} for:item="fruit">
+                <li key={fruit}>
+                    {fruit}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+
+    <lightning-card title="Create an array using constructor" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={fruitsArray4} for:item="fruit">
+                <li key={fruit}>
+                    {fruit}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+
+    <lightning-card title="Create an array using Array.of()" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={fruitsArray6} for:item="fruit">
+                <li key={fruit}>
+                    {fruit}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
