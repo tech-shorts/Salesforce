@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Iterate using For Each" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={fruitsList} for:item="fruit">
+                <li key={fruit.Id}>
+                    {fruit.Id}. {fruit.Name}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
