@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Add Items to array using push" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={fruitsList1} for:item="fruit">
+                <li key={fruit}>
+                    {fruit}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+    <lightning-card title="Add Items to an array using unshift" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={fruitsList2} for:item="fruit">
+                <li key={fruit}>
+                    {fruit}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+    <lightning-card title="Add Items to an array using splice" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={fruitsList3} for:item="fruit">
+                <li key={fruit}>
+                    {fruit}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+    <lightning-card title="Add Items to an array using concat" icon-name="custom:custom14">
+        <ul class="slds-m-around_medium">
+            <template for:each={fruitsList4} for:item="fruit">
+                <li key={fruit}>
+                    {fruit}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
